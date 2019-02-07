@@ -1,0 +1,2238 @@
+<div class="row" style="display: inline-flex; flex-wrap: wrap;">
+          <!-- ngRepeat: dish in category.items -->
+          <div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope">
+            <div class="dish" >
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/4a9d1437-b1f5-4926-b377-737fc2aee93d" src="https://nextdish.com/api/dish/image/4a9d1437-b1f5-4926-b377-737fc2aee93d">
+                </div>
+                <div class="overlay ng-hide"></div>
+              </div>
+              <div class="membership-discount ng-hide">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;">
+                    <div class="chef-info-wrapper" style="text-align: center">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Peking Pork<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">京酱肉丝</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price">
+                      <div class="ng-binding">
+                        $11
+                        <span>.</span>
+                        <sup style="font-size:60%"class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span class="ng-hide">.</span>
+                        <sup style="font-size:60%" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$11</span>
+                        <span class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope">
+            <div class="dish">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/0bea1376-89dc-4d1a-9b3c-cb41b8d3ea2f" src="https://nextdish.com/api/dish/image/0bea1376-89dc-4d1a-9b3c-cb41b8d3ea2f">
+                </div>
+                <div class="overlay ng-hide"></div>
+              </div>
+              <div class="membership-discount">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Braised Duck with Mung Bean Jelly<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --><i style="margin-left: 3px; margin-bottom: 5px;" class="icon icon-sm icon-spicy ng-scope" ng-repeat="i in getNumberArray(dish.spicy)"></i><!-- end ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">凉粉烧鸭</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $13
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$13</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $12
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">15</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/dfd0d6e4-27f2-47c4-8ecc-5686486c9292" src="https://nextdish.com/api/dish/image/dfd0d6e4-27f2-47c4-8ecc-5686486c9292">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Sautéed Fish Filet in Rice Wine Sauce<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">糟溜鱼片</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $12
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$12</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/0d128242-ef6f-456b-9bf5-55e51d5307a6" src="https://nextdish.com/api/dish/image/0d128242-ef6f-456b-9bf5-55e51d5307a6">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Stir Fried Prawn with Silky Egg and Mu Er<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">虾仁木耳滑蛋</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $11
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$11</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/7373d7d0-b86f-40c2-9007-29af20246d5c" src="https://nextdish.com/api/dish/image/7373d7d0-b86f-40c2-9007-29af20246d5c">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Black Pepper Beef with Oyster Mushroom<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --><i style="margin-left: 3px; margin-bottom: 5px;" class="icon icon-sm icon-spicy ng-scope" ng-repeat="i in getNumberArray(dish.spicy)"></i><!-- end ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">黑椒牛肉炒杏鲍菇</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $12
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$12</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/d1e93fa7-8a43-4eb5-95c5-feb7b180e27e" src="https://nextdish.com/api/dish/image/d1e93fa7-8a43-4eb5-95c5-feb7b180e27e">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Grandma's Braised Pork Belly<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">外婆红烧肉</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $13
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$13</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/07636020-e732-46d6-ab07-77201c752e06" src="https://nextdish.com/api/dish/image/07636020-e732-46d6-ab07-77201c752e06">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Golden Pomfret with Diced Hot Peppers<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --><i style="margin-left: 3px; margin-bottom: 5px;" class="icon icon-sm icon-spicy ng-scope" ng-repeat="i in getNumberArray(dish.spicy)"></i><!-- end ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">剁椒金鲳鱼</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $15
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$15</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/ce900a67-ff47-45c2-a1c4-64a63874cb56" src="https://nextdish.com/api/dish/image/ce900a67-ff47-45c2-a1c4-64a63874cb56">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Steamed Pork Ribs with Rice<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">糯米蒸排骨</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $12
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$12</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $10
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">65</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/f1ef3d40-a681-491c-afa8-1a36a5f39bd5" src="https://nextdish.com/api/dish/image/f1ef3d40-a681-491c-afa8-1a36a5f39bd5">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Braised Winter Melon<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">红烧冬瓜</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $8
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$8</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/e18dfefb-847c-48d9-af66-f468b07b37c5" src="https://nextdish.com/api/dish/image/e18dfefb-847c-48d9-af66-f468b07b37c5">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Braised Tofu with Ground Pork<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">肉沫豆腐</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $10
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$10</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/bfef9ddf-4f5b-418a-ab13-4ddaa7826958" src="https://nextdish.com/api/dish/image/bfef9ddf-4f5b-418a-ab13-4ddaa7826958">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Braised Organic Chicken with Chestnuts<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">板栗烧鸡（有机）</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $12
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$12</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/f21de41d-221e-4b78-a0ec-440757eeced4" src="https://nextdish.com/api/dish/image/f21de41d-221e-4b78-a0ec-440757eeced4">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Oyster sauce Gai Lan<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">蚝油芥兰</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $9
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$9</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/374425f5-84d4-4061-ab37-3d7e6b7f3352" src="https://nextdish.com/api/dish/image/374425f5-84d4-4061-ab37-3d7e6b7f3352">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Chinese Eggplant Braised with Sweet Bean Sauce<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">酱烧茄子</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $9
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$9</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/03581a25-6385-4745-80b1-717b6a8e3b6f" src="https://nextdish.com/api/dish/image/03581a25-6385-4745-80b1-717b6a8e3b6f">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Shredded Potato Sauteed with Green Pepper<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">青椒土豆丝</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $8
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$8</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/a6d2c344-a98d-4bfa-92e3-36409fec2f54" src="https://nextdish.com/api/dish/image/a6d2c344-a98d-4bfa-92e3-36409fec2f54">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Tomato Soup with Meatballs<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">家常番茄丸子汤</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $8
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$8</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/f22680d6-25bd-4a9f-9f7d-b98686d9661a" src="https://nextdish.com/api/dish/image/f22680d6-25bd-4a9f-9f7d-b98686d9661a">
+                </div>
+                <div class="overlay ng-hide" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Sweet and Sour Pork Ribs<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">糖醋排骨</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding ng-hide" ng-show="dish.supplierName"></span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $11
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$11</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out ng-hide" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish disabled" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/20dccc41-53bd-406f-888f-b6875f778a68" src="https://nextdish.com/api/dish/image/20dccc41-53bd-406f-888f-b6875f778a68">
+                </div>
+                <div class="overlay" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">BBQ Pork<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">蜜汁叉烧</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding" ng-show="dish.supplierName">MW Gourmet 兴隆</span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $11
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">50</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$11</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">50</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted ng-hide" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items --><div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-scope" ng-repeat="dish in category.items" ng-show="dish.show &amp;&amp; (!recommendedMenu || !selectedCustomerGroup || (recommendedMenu &amp;&amp; (dish.customerGroup === 'BOTH' || dish.customerGroup === selectedCustomerGroup)))">
+            <div class="dish disabled" ng-class="{
+            'disabled': (!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id],
+            'selected': cart[dish.id]}">
+              <div class="dish-image-container" ng-click="openDishDetail(dish)">
+                <div class="image-wrapper">
+                  <img class="image" ng-src="https://nextdish.com/api/dish/image/7a45bc46-a750-4892-8802-0b332edfa0c5" src="https://nextdish.com/api/dish/image/7a45bc46-a750-4892-8802-0b332edfa0c5">
+                </div>
+                <div class="overlay" ng-show="(!dish.available || !availableCount[dish.id]) &amp;&amp; !cart[openDish.id]"></div>
+              </div>
+              <div class="membership-discount ng-hide" ng-show="dish.memberPrice">
+                <img src="./resources/image/membership.png?v=1.1">
+                <div class="membership-info" ng-hide="!user || user.membershipSubscription">
+                  Enjoy member price for this dish
+                  <p>Not a member? <a onclick="window.location.href='./membership'">Join now!</a>
+                  </p>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.specialPrice">
+                <div class="discount-ribbon">
+                  <span class="ng-binding"></span>
+                </div>
+              </div>
+              <!--<div class="ribbon-wrapper" ng-show="dish.newDish">-->
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.newDish &amp;&amp; !dish.top10 &amp;&amp; !dish.top5">
+                <div class="promote-ribbon"><span>NEW</span></div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top10">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                    2018</p>
+                    <p class="second-line">TOP 10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ribbon-wrapper ng-hide" ng-show="dish.top5">
+                <div class="promote-ribbon top-10">
+                  <div class="text-wrapper">
+                    <p class="first-line">
+                      2018</p>
+                    <p class="second-line">TOP 5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="chef-info-wrapper ng-hide" style="text-align: left;" ng-show="dish.chef &amp;&amp; dish.chef.picture" ng-click="showChefDialog(dish.chef)">
+                    <div class="chef-info-wrapper" style="text-align: center" ng-click="showChefDialog(dish.chef)">
+                      <div class="tip-content" style="display: none; ">
+                        <div class="btn-content-close" data-close-tip="">×</div>
+                        <img class="chef-avatar-large">
+                        <div class="title-wrapper">
+                          <img class="chef-icon" src="./resources/image/chef-icon.png">
+                          <p class="title ng-binding"></p>
+                        </div>
+                        <hr>
+                        <p style="white-space: pre-wrap" class="ng-binding"></p>
+                      </div>
+                      <img class="chef-avatar">
+                    </div>
+                  </div>
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name ng-binding" ng-click="openDishDetail(dish)">Roast Duck (Half)<span><!-- ngRepeat: i in getNumberArray(dish.spicy) --></span></span>
+                    <span class="name cn ng-binding">明炉烧鸭</span>
+                    <span class="dish-tag-wrapper">
+                        <span class="tag ng-binding" ng-show="dish.supplierName">MW Gourmet 兴隆</span>
+                      </span>
+                    <span class="sold-out-soon ng-hide" ng-show="availableCount[dish.id] > 0 &amp;&amp; availableCount[dish.id] <= 5">Sold out soon</span>
+
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <div class="select-line ng-hide" data-toggle="buttons" ng-show="dish.dishGroupItems.length > 1">
+                  <!-- ngRepeat: dishGroupItem in dish.dishGroupItems -->
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <!--Add class "price-line-through" if is member-->
+                    <div class="price" ng-class="{'price-line-through': user.membershipSubscription &amp;&amp; dish.memberPrice}" ng-show="!dish.specialPrice">
+                      <div class="ng-binding">
+                        $13
+                        <span ng-show="getFractionPart(dish.price) !== ''">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''" class="ng-binding">95</sup>
+                      </div>
+                    </div>
+                    <div class="price ng-hide" ng-show="dish.specialPrice">
+                      <div class="ng-binding">
+                        $0
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-hide">.</span>
+                        <sup style="font-size:60%" ng-show="getFractionPart(dish.specialPrice) !== ''" class="ng-binding ng-hide">
+                          0
+                        </sup>
+                        <span style="margin-left: 10px;" class="full2 ng-binding">$13</span>
+                        <span ng-show="getFractionPart(dish.specialPrice) !== ''" class="full2 ng-hide">.</span>
+                        <sup class="full2 ng-binding" style="font-size:60%" ng-show="getFractionPart(dish.price) !== ''">95</sup>
+                      </div>
+                    </div>
+                    <div class="price member-price ng-hide" ng-show="dish.memberPrice">
+                        <span class="ng-binding">
+                          $0
+                        <span>.</span>
+                        <sup style="font-size:60%" class="ng-binding">0</sup>
+                        </span>
+                      <span class="tag">Member price</span>
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <button type="button" class="btn btn-default btn-minus ng-hide" ng-click="removeItem(dish.id)" ng-show="cart[dish.id] &amp;&amp; !isPassedOrder()">−
+                    </button>
+                    <span class="quantity ng-binding ng-hide" ng-hide="(!dish.available || !availableCount[dish.id]) || !cart[dish.id]"></span>
+                    <button type="button" class="btn btn-default sold-out" disabled="" ng-show="!dish.available || !availableCount[dish.id]">SOLD OUT
+                    </button>
+                    <button type="button" class="btn btn-default btn-plus highlighted ng-hide" ng-click="addItem(dish.id)" ng-show="dish.available &amp;&amp; !isPassedOrder() &amp;&amp; availableCount[dish.id]">+ <span class="hidden-xs">ADD</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end ngRepeat: dish in category.items -->
+
+          <div class="dish-wrapper col-xs-6 col-sm-6 col-md-4" ng-show="category.title === 'Main Dishes'">
+            <div class="dish membership">
+              <div class="dish-image-container" ng-click="openShareDetail()" data-user-event="share-native-ad-click">
+                <div class="image-wrapper">
+                  <img class="image" src="../../resources/image/shareNativeAds2.png">
+                </div>
+              </div>
+              <div class="ribbon-wrapper membership-ribbon-wrapper" ng-click="openShareDetail()" data-user-event="share-native-ad-click">
+                <!--<div class="discount-ribbon membership-ribbon">
+                  <div class="ribbon"><div class="text">Refer a Friend</div></div>
+                </div>-->
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name" ng-click="openShareDetail()" data-user-event="share-native-ad-click">
+                      Invite a Friend, Get $10 Reward
+                    </span>
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <div class="price">
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <a type="button" class="btn btn-default btn-plus go-membership highlighted" href="javascript:;" ng-click="openShareDetail()" data-user-event="share-native-ad-click">
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-wrapper col-xs-6 col-sm-6 col-md-4 ng-hide" ng-show="category.title === 'Cold Plate'">
+            <div class="dish membership">
+              <div class="dish-image-container" ng-click="openMembershipDetail()" data-user-event="member-native-ad-click">
+                <div class="image-wrapper">
+                  <img class="image" src="../../resources/image/memberNativeAds.png">
+                </div>
+              </div>
+              <div class="ribbon-wrapper membership-ribbon-wrapper" ng-click="openMembershipDetail()" data-user-event="member-native-ad-click">
+                <div class="discount-ribbon membership-ribbon">
+                  <div class="ribbon"><div class="text">membership</div></div>
+                </div>
+              </div>
+              <div class="dish-intro">
+                <div class="line1 truncate-name">
+                  <div class="dish-name-block" style="text-align: left">
+                    <span class="name" ng-click="openMembershipDetail()" data-user-event="member-native-ad-click">
+
+                      One Week Membership Free Trial
+
+                    </span>
+                  </div>
+                  <span class="spacer"></span>
+                </div>
+                <hr>
+                <div class="line2">
+                  <div class="price-wrapper">
+                    <div class="price">
+                    </div>
+                  </div>
+                  <div class="action-wrapper">
+                    <a type="button" class="btn btn-default btn-plus go-membership highlighted" href="./membership#benefits-detail">
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>

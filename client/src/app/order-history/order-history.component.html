@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NetDish</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">NetDish</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="btn btn-danger" (click)="signOut()">
+        <i class="fa fa-sign-out" aria-hidden="true"></i> Log out</button>
+    </div>
+  </nav>
+
+  <!-- <div *ngIf = "current_user !== "></div> -->
+  <section class="section dark-translucent-bg fp-section fp-table active fp-completely" *ngIf = "current_user.user_level == 0 || !order_admin">
+
+      <div class="container">
+        <h1>Wecome customer!</h1>
+        <h1 class="display-3" style="color:#fff;">Hello, {{current_user.first_name}} {{current_user.last_name}},
+          <span *ngIf='orders.length === 0'>your order history is empty.</span>
+          <span *ngIf="orders.length !== 0">your recent orders:</span>
+        </h1>
+        <div class="list-group lis" *ngFor="let o of orders">
+          <p class="list-group-item list-group-item-action active">
+            Order Created At:
+            <strong>{{o.createdAt | date: "medium"}}</strong>
+          </p>
+          <p class="list-group-item list-group-item-action">Order Details: <br/>{{o.info}}
+          </p>
+          <p class="list-group-item list-group-item-action">Unit Price:
+            <span *ngFor="let p of o.foods">{{p.food_name}}: $ {{p.price}}</span>
+          </p>
+          <p class="list-group-item list-group-item-action">Total Price: $ {{o.total_price}}
+          </p>
+          <hr>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="section dark-translucent-bg fp-section fp-table active fp-completely" *ngIf="order_admin || current_user.user_level == 9">
+
+    <div class="container">
+      <h1>Wecome admin!</h1>
+      <h1 class="display-3" style="color:#fff;">Hello, {{current_user.first_name}} {{current_user.last_name}},
+        <span *ngIf='orders.length === 0'>your order history is empty.</span>
+        <span *ngIf="orders.length !== 0">your recent orders:</span>
+      </h1>
+      <div class="list-group lis" *ngFor="let o of orders">
+        <p class="list-group-item list-group-item-action active">
+          Order Created by:
+          <strong>{{o.order_user.first_name}} {{o.order_user.last_name}}</strong>
+        </p>
+        <p class="list-group-item list-group-item-action active">
+          Order Created At:
+          <strong>{{o.createdAt | date: "medium"}}</strong>
+        </p>
+        <p class="list-group-item list-group-item-action">Order Details: <br/>{{o.info}}
+        </p>
+        <p class="list-group-item list-group-item-action">Unit Price:
+          <span *ngFor="let p of o.foods"><br/>{{p.food_name}}: $ {{p.price}}<br/></span>
+        </p>
+        <p class="list-group-item list-group-item-action">Total Price: $ {{o.total_price}}
+        </p>
+        <hr>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

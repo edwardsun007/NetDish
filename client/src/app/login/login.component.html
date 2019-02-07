@@ -1,0 +1,228 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NetDish</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">NetDish Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container" id="form">
+    <!--loginbox starts-->
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <i class="fa fa-user-circle" aria-hidden="true"></i> Sign In Your Accout</div>
+
+        </div>
+
+        <!-- log in [(ngModel)]="user_log.email-->
+        <div style="padding-top:30px" class="panel-body">
+          <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+          <form id="loginform" class="form-horizontal" role="form" (submit)="login(formLogin)" #formLogin="ngForm">
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+              </span>
+              <input id="login-username" type="email" class="form-control" placeholder="Enter email" name="email" ngModel
+                required [email]="true" #log_email="ngModel">
+            </div>
+            <div *ngIf="log_email.invalid && (log_password.dirty || log_password.touched)">
+              <div class="alert alert-dismissible alert-danger aler_log" role="alert">
+                <div *ngIf="log_email.errors.required">
+                  <span> Email is required!</span>
+                </div>
+                <div *ngIf="log_email.errors.email">
+                  <span> Invalid Email Address!</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-unlock fa-2x" aria-hidden="true"></i>
+              </span>
+              <input id="login-password" type="password" class="form-control" placeholder="Password" name="password" ngModel
+                required #log_password="ngModel">
+            </div>
+            <div *ngIf="log_password.invalid && (log_password.dirty || log_password.touched)">
+              <div class="alert alert-dismissible alert-danger aler_log" role="alert">
+                <div *ngIf="log_password.errors.required">
+                  <span> Password is required.</span>
+                </div>
+                <div *ngIf="error_message.login!=''">
+                  <span> {{error_message.login}}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div style="margin-top:10px" class="form-group">
+              <div class="col-sm-12 controls">
+                <button id="btn-login" [disabled]="formLogin.invalid" *ngIf="!isLoading" class="btn btn-success">Login </button>
+              </div>
+            </div>
+            <mat-spinner *ngIf="isLoading"></mat-spinner>
+            <div class="alert alert-dismissible alert-danger aler_log" role="alert" *ngIf="error_message.login != ''">
+              {{error_message.login}}
+            </div>
+            <!--loginbox starts-->
+          </form>
+          <!-- login form ends-->
+          <div class="form-group">
+            <div class="col-md-12 control">
+              <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                Don't have an account yet ?
+                <button onClick="$('#loginbox').hide(); $('#signupbox').show()" class="btn btn-warning btn-sm"> Sign Up Here </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--loginbox ends-->
+
+    <!--sign up box start-->
+    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title"> Create your NetDish Account </div>
+          <div style="float:right; font-size: 85%; position: relative; top:-10px">
+            <button id="signinlink" onclick="$('#signupbox').hide(); $('#loginbox').show()" class="btn-sm btn btn-warning">Sign In</button>
+          </div>
+        </div>
+
+        <!-- register -->
+        <div class="panel-body">
+          <form id="signupform" class="form-horizontal" role="form" (submit)="register(registerForm)" #registerForm="ngForm">
+            <div class="form-group">
+              <label for="email" class="col-md-4 control-label">Email</label>
+
+              <div class="col-md-9 input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                </span>
+
+                <input type="email" class="form-control" name="email" placeholder="Email Address" ngModel required email
+                  #reg_email="ngModel">
+              </div>
+              <div *ngIf="reg_email.invalid && (reg_email.dirty || reg_email.touched)" class="al">
+                <div class="alert alert-dismissible alert-danger aler" role="alert">
+                  <div *ngIf="reg_email.errors.required">
+                    <span> Email is required.</span>
+                  </div>
+                  <div *ngIf="reg_email.errors.email">
+                    <span>Please input an valid email.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="firstname" class="col-md-4 control-label">First Name</label>
+              <div class="col-md-9 input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                </span>
+                <input type="text" class="form-control" name="firstname" placeholder="First Name" ngModel #reg_firstname="ngModel"
+                  required>
+              </div>
+              <div *ngIf="reg_firstname.invalid && (reg_firstname.dirty || reg_firstname.touched)" class="al">
+                <div class="alert alert-dismissible alert-danger aler" role="alert" *ngIf="reg_firstname.errors.required">
+                  First name is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-md-4 control-label">Last Name</label>
+              <div class="col-md-9 input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                </span>
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name" ngModel #reg_lastname="ngModel"
+                  required>
+              </div>
+              <div *ngIf="reg_lastname.invalid && (reg_lastname.dirty || reg_lastname.touched)" class="al">
+                <div class="alert alert-dismissible alert-danger aler" role="alert" *ngIf="reg_lastname.errors.required">
+                  Last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="col-md-4 control-label">Password</label>
+              <div class="col-md-9 input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+                </span>
+                <input type="password" class="form-control" name="password" placeholder="Password" ngModel #reg_password="ngModel"
+                  required minlength="4">
+              </div>
+              <div *ngIf="reg_password.invalid && (reg_password.dirty || reg_password.touched)" class="al">
+                <div class="alert alert-dismissible alert-danger aler" role="alert">
+                  <div *ngIf="reg_password.errors.required">
+                    <span> Password is required.</span>
+                  </div>
+                  <div *ngIf="reg_password.errors.minlength">
+                    <span>Password need at least four characters.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="col-md-9 control-label">Password Confirmation</label>
+              <div class="col-md-9 input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-unlock fa-2x" aria-hidden="true"></i>
+                </span>
+                <input type="password" class="form-control" name="pass_con" placeholder="Password confirmation" ngModel
+                  #pass_con="ngModel" compare="password" required>
+              </div>
+              <div *ngIf="pass_con.invalid && (pass_con.dirty || pass_con.touched)" class="al">
+                <div class="alert alert-dismissible alert-danger aler" role="alert">
+                  <div *ngIf="pass_con.errors.required">
+                    <span> Password confirmation is required.</span>
+                  </div>
+                  <div *ngIf="pass_con.errors.compare">
+                    <span>Not mattch the password.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <!-- Button -->
+              <div class="col-md-offset-3 col-md-9">
+                <button id="btn-signup" type="submit" class="btn btn-info" [disabled]="registerForm.invalid">
+                  <i class="icon-hand-right"></i>Sign Up</button>
+                <div class="alert alert-dismissible alert-danger aler" role="alert" *ngIf="error_message.reg != ''">
+                  {{error_message.reg}}
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--sign up box end-->
+
+  </div>
+</body>
+</html>

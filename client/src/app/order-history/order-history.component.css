@@ -1,0 +1,16 @@
+.lis {
+  width: 30rem;
+}
+
+
+
+body {
+  background: url(/assets/images/pexels-photo-1268551.jpeg)
+  no-repeat center center;
+  -webkit-background-attachment: fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0;
+  position: relative;
+  height: 2000px;
+}

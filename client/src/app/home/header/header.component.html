@@ -1,0 +1,53 @@
+<mat-toolbar>
+    <span ><a routerLink="/">NetDish</a></span>
+    <!--spacer-->
+    <span class="example-fill-remaining-space"></span>
+
+    <span>
+        <div class="w3-dropdown-hover">
+        <button class="w3-button w3-green">Online Users: {{parent_total_users.length}}</button>
+          <div class="w3-dropdown-content w3-bar-block w3-hover-border-white">
+                  <span class="w3-bar-item w3-button w3-green w3-row" *ngFor="let user of parent_total_users" >{{user.info.first_name}} {{user.info.last_name}}</span>
+          </div>
+        </div>
+    </span>
+
+
+    <span *ngIf="parent_current_user"><a [routerLink]="['/orderhistory', parent_current_user._id]" routerLinkActive="active-link">Order History</a></span>
+
+    <span>
+        <a [routerLink]="['/new_menu']">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" *ngIf="parent_current_user != undefined && parent_current_user.user_level == 9">
+            <i class="fa fa-cutlery fa-1x icon" aria-hidden="true"></i>Add New Munu </button>
+        </a>
+    </span>
+
+    <span>
+        <a [routerLink]="['/new_user']">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" *ngIf="parent_current_user != undefined && parent_current_user.user_level == 9">
+            <i class="fa fa-user-o fa-lg icon" aria-hidden="true"></i>Add New User </button>
+        </a>
+    </span>
+
+    <span>
+          <mat-card *ngIf="parent_current_user" class="user-card">
+              <mat-card-title >{{parent_current_user.first_name}} {{parent_current_user.last_name}}</mat-card-title>
+              <mat-card-subtitle>{{parent_current_user.email}}</mat-card-subtitle>
+          </mat-card>
+    </span>
+
+    <span *ngIf="!(parent_logged || parent_current_user != null)">
+        <a [routerLink]="['/login']">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit" *ngIf="current_user == null">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>Log in / Register
+            </button>
+        </a>
+        <a>
+            <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+              <span class="fa fa-google"> Gmail</span>
+            </button>
+        </a>
+    </span>
+
+
+</mat-toolbar>

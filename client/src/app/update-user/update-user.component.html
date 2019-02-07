@@ -1,0 +1,75 @@
+<div class="jumbotron">
+  <h4 class="display-3">Hello, {{user.name}}, please  your profile</h4>
+  <div class="container">
+    <form id="signupform" class="form-horizontal" role="form" (submit) = "update()" #registerForm = "ngForm">
+      <div class="form-group" *ngIf = "user.email == ''">
+        <label for="email" class="col-md-3 control-label">Email</label>
+
+        <div class="col-md-9 input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></span>
+
+          <input type="text" class="form-control" name="email" placeholder="Email Address" [(ngModel)] = "user_reg.email" required email #reg_email = "ngModel">
+        </div>
+        <div *ngIf="reg_email.invalid && (reg_email.dirty || reg_email.touched)" class="al">
+          <div class="alert alert-dismissible alert-danger aler" role="alert">
+            <div *ngIf="reg_email.errors.required">
+              <span> Email is required.</span>
+            </div>
+            <div *ngIf="reg_email.errors.email">
+              <span>Please input an valid email.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="password" class="col-md-3 control-label">Password</label>
+        <div class="col-md-9 input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-2x" aria-hidden="true"></i></span>
+          <input type="password" class="form-control" name="passwd" placeholder="Password" [(ngModel)] = "user_reg.password" #reg_password = "ngModel" required minlength="4">
+        </div>
+        <div *ngIf="reg_password.invalid && (reg_password.dirty || reg_password.touched)" class="al">
+          <div class="alert alert-dismissible alert-danger aler" role="alert">
+            <div *ngIf="reg_password.errors.required">
+              <span> Password is required.</span>
+            </div>
+            <div *ngIf="reg_password.errors.minlength">
+              <span>Password need at least four characters.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="col-md-3 control-label">Password Confirmation</label>
+        <div class="col-md-9 input-group">
+          <span class="input-group-addon"><i class="fa fa-unlock fa-2x" aria-hidden="true"></i></span>
+          <input type="password" class="form-control" name="pass_con" placeholder="Password confirmation" [(ngModel)] = "password_confirm.con" #reg_confirm = "ngModel" pattern="{{user_reg.password}}" required >
+        </div>
+        <div *ngIf="reg_confirm.invalid && (reg_confirm.dirty || reg_confirm.touched)" class="al">
+          <div class="alert alert-dismissible alert-danger aler" role="alert">
+            <div *ngIf="reg_confirm.errors.required">
+              <span> Password confirmation is required.</span>
+            </div>
+            <div *ngIf="reg_confirm.errors.pattern">
+              <span>Not mattch the password.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+          <button id="btn-signup" type="submit" class="btn btn-info" [disabled] = "registerForm.invalid"><i class="icon-hand-right"></i>Update</button>
+          <div class="alert alert-dismissible alert-danger aler" role="alert" *ngIf="error_message.email != ''">
+            {{error_message.email}}
+          </div>
+
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>

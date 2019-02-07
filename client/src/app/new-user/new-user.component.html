@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']">NetDish</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <button class="btn btn-info mx-lg-1 my-lg-1 my-sm-0" *ngIf="userIsAuthenticated && admin" (click)="newItem()">
+            <i class="fa fa-cutlery fa-1x icon mx-1" aria-hidden="true"></i>Create New Item</button>
+
+    <a [routerLink]="['/new_menu']" >
+      <button class="btn btn-secondary my-2 my-sm-0"><i class="fa fa-cutlery fa-1x icon" aria-hidden="true"></i>Add New Munu </button>
+    </a>
+    <button *ngIf="userId != undefined" class="btn btn-danger" (click) = "logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</button>
+    <!--button *ngIf="current_user != undefined" class="btn btn-danger" (click) = "logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</button-->
+
+  </div>
+
+</div>
+</nav>
+
+<div class="container">
+  <form class="top" (submit) = "add_new()" #registerForm = "ngForm">
+    <fieldset>
+      <legend>Add a new user</legend>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address:</label>
+        <input type="email" class="form-control" id="new_u_email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)] = "new_user.email" required email #reg_email = "ngModel" name="email">
+      </div>
+
+      <div *ngIf="reg_email.invalid && (reg_email.dirty || reg_email.touched)">
+        <div class="alert alert-dismissible alert-danger" role="alert" >
+          <div *ngIf="reg_email.errors.required">
+            <span> Email is required.</span>
+          </div>
+          <div *ngIf="reg_email.errors.email">
+            <span>Please input an valid email.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- first name -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">First Name:</label>
+        <input type="text" class="form-control" id="new_u_first" aria-describedby="emailHelp" placeholder="Enter first name" name="firstname" [(ngModel)] = "new_user.first_name" #reg_firstname = "ngModel" required >
+      </div>
+      <div *ngIf="reg_firstname.invalid && (reg_firstname.dirty || reg_firstname.touched)">
+        <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="reg_firstname.errors.required">
+          First name is required.
+        </div>
+      </div>
+
+      <!-- last name -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Last Name: </label>
+        <input type="text" class="form-control" id="new_u_last" aria-describedby="emailHelp" placeholder="Enter last name" name="lastname" [(ngModel)] = "new_user.last_name" #reg_lastname = "ngModel" required>
+      </div>
+      <div *ngIf="reg_lastname.invalid && (reg_lastname.dirty || reg_lastname.touched)">
+        <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="reg_lastname.errors.required">
+          Last name is required.
+        </div>
+      </div>
+
+      <!-- password -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Password</label>
+        <input type="password" class="form-control" id="new_u_pw" aria-describedby="emailHelp" placeholder="Enter password" name="password" [(ngModel)] = "new_user.password" #reg_password = "ngModel" required minlength="4" >
+      </div>
+      <div *ngIf="reg_password.invalid && (reg_password.dirty || reg_password.touched)">
+        <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="reg_password.errors.required">
+          Password is required.
+        </div>
+        <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="reg_password.errors.minlength">
+          Password need at least four characters.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Password Confirmation</label>
+        <input type="password" class="form-control" id="new_u_pwconf" aria-describedby="emailHelp" placeholder="Confirm your password" name="passwordconfirm" [(ngModel)] = "password_confirm.con" #reg_confirm = "ngModel" pattern="{{new_user.password}}">
+      </div>
+      <div *ngIf="reg_confirm.invalid && (reg_confirm.dirty || reg_confirm.touched)">
+        <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="reg_confirm.errors.pattern">
+          Not mattch the password.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled] = "registerForm.invalid">Create</button>
+      <div class="alert alert-dismissible alert-danger" role="alert" *ngIf="error_message.email != ''">
+        {{error_message.email}}
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NetDish</title>
+</head>
+
+<body>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <!--head starts-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="!isLoading">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">NetDish</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--spacer 2 1 auto-->
+      <span class="example-fill-remaining-space"></span>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+          <span *ngIf="userIsAuthenticated && current_user._id!=null">
+              <a class="nav-link"  [routerLink]="['/orderhistory', current_user._id]">
+                <button class="btn btn-warning my-2 my-sm-0" type="submit">Order History</button>
+              </a>
+          </span>
+
+          <!-- logged in for socialUser login, userId for login-->
+          <div class="w3-dropdown-hover" *ngIf="userIsAuthenticated"> <!--loggedIn || current_user._id!=null-->
+              <button class="online-user btn">Online Users: {{total_login_user.length}}</button>
+              <div class="w3-dropdown-content w3-bar-block w3-border">
+                <span class="w3-bar-item w3-button w3-green w3-row" *ngFor="let user of total_login_user" >{{user.info.first_name}} {{user.info.last_name}}</span>
+             </div>
+          </div>
+
+        <button class="btn btn-info mx-lg-1 my-lg-1 my-sm-0" *ngIf="userIsAuthenticated && admin" (click)="newItem()">
+            <i class="fa fa-cutlery fa-1x icon mx-1" aria-hidden="true"></i>Create New Item</button>
+
+        <a [routerLink]="['/new_user']" class="mx-1">
+          <button class="btn btn-info my-1 my-sm-0" type="submit" *ngIf="userIsAuthenticated && admin">
+            <i class="fa fa-user-o fa-1x icon" aria-hidden="true"></i> Create Account</button>
+        </a>
+
+        <!--div *ngIf="!(loggedIn || current_user != null)"-->
+        <div *ngIf="!(loggedIn || userIsAuthenticated)">
+
+          <button class="btn btn-success" (click)="signIn()">
+            <i class="fa fa-sign-in fa-2" aria-hidden="true">Log In</i>
+          </button>
+
+          <a class="mx-lg-1">
+            <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+              <span class="fa fa-google">Sign In With Google</span>
+            </button>
+          </a>
+          <!-- <a>
+            <button class="btn btn-social-icon btn-facebook" (click)="signInWithFB()">
+              <span class="fa fa-facebook"></span>
+            </button>
+          </a> -->
+        </div>
+
+        <div *ngIf="loggedIn || userIsAuthenticated">
+          <div class="card-block">
+            <h4 class="card-title"><img src='../../assets/images/user-solid.svg' style="width:20px; height:20px; vertical-align:top;">  {{ current_user.first_name }}</h4>
+            <p class="card-text">{{ current_user.email }}</p>
+          </div>
+        </div>
+
+        <button *ngIf="loggedIn || userIsAuthenticated" class="btn btn-danger" (click)="signOut()">
+        <i class="fa fa-sign-out" aria-hidden="true"></i> Log out</button>
+
+      </div>
+      <!--navbar ending-->
+
+    </div>
+  </nav>
+<!---------------------***********************end header****************************---------------------------->
+
+  <!-- hero image -->
+  <div class="jumbotron" *ngIf="!isLoading">
+    <div class="container">
+      <h1 class="animated infinite fadeInUp">We have all you want here !</h1>
+    </div>
+  </div>
+
+  <!--text below hero -->
+  <section id="service" *ngIf="!isLoading">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+          <h2 class="text-center mt-4">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>Let NetDish Be
+            <strong>Your Choice</strong>
+          </h2>
+          <hr>
+          <p class="large text-center">
+            We do our best to enlighten your day with the most nutrious and delicious Chinese food that you possibly can find online!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="show">
+    <div class="container" *ngIf="!isLoading">
+      <!--div class="checkout"-->
+          <!--embedded check out box--> <!--[hidden]="total_items==undefined || total_items.length<=0"-->
+          <div class='checkoutbox container' [hidden]="total_items==undefined || total_items.length<=0">
+            <div class='checkoutbox-wrapper'>
+                <div style="margin:auto;">
+                    <div class='checkout_counter' [hidden]="total_items==undefined">{{total_items.length}}</div>
+                    <img src="../../assets/images/checkout_pack.png" style="margin-left:200px; width:40px; height=40px; display: inline-block; vertical-align:top; ">
+                </div>
+                <p style="font-family: 'Roboto', sans-serif; font-weight:bold;">In Your Cart: </p> <!--style="vertical-align:top; width=20px; display:inline-block; margin-right:5px;"-->
+                <ul style="list-style-type: none;">
+                    <li *ngFor = "let item of total_items">
+                      <p style="font-family: 'Ubuntu', sans-serif;">{{item.food_name}} </p>
+                      <p>QTY: {{item.quantity}} <button class="btn btn-danger" (click)="delItem(item._id)"><span class="glyphicon glyphicon-minus"> -- </span></button></p>
+                    </li>
+                </ul>
+            <hr>
+            <p>Subtotal: <span class="dollar-sign">$</span> {{total_for_display}}</p>
+            <button type="submit" *ngIf = "total_items && total_items.length !== 0" style="text-align:center;" class="btn btn-success" (click) = "place_order()">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>CheckOut</button>
+            </div>
+          </div>
+          <!--embedded checkout box ends-->
+
+          <!--div class="row d-flex flex-row flex-wrap flex-md-row justify-content-around" style="display: inline-flex; flex-wrap: wrap; "-->
+          <div class="row" style="display: inline-flex; flex-wrap: wrap; "> <!---->
+              <div class="dish-wrapper" *ngFor="let a of all_foods" style="col-xs-12 col-sm-6 col-md-2 col-lg-2"> <!-- -->
+                  <div class="dish" >
+                      <div class='dish-image-container'>
+                        <img class='image' src='{{a.imagePath}}'>
+                      </div>
+                  </div>
+                  <div class="dish-info">
+                      <p class="food-name">{{a.food_name}}</p>
+                      <p class="food-price"><span class="dollar-sign">$</span>{{a.price}}</p>
+                      <p class="p-desc">{{a.description}}<p>
+                      <form *ngIf="loggedIn || userIsAuthenticated" #addfood="ngForm"> <!--(submit)="create_order(a)" *ngIf="current_user != null"-->
+                        <label>Quantity:</label>
+                        <input class="col-lg-2 col-md-4 col-sm-5" type="number" [(ngModel)]="a.quantity" required min="1" name="quantity" #quantity="ngModel">
+                        <button class="btn btn-default btn-plus highlighted" (click)="addItem(a)" [disabled]="!addfood.valid">Add</button> <!--style="background-color: black; border:#fff; color:#fff;"-->
+                        <button class="btn btn-danger btn-sm" *ngIf="admin" (click)="delete_item(a._id, a.food_name)">Delete this food</button>
+                      </form>
+                        <button class="like-btn" *ngIf="loggedIn || userIsAuthenticated" [style.color]="a.likeBy.indexOf(current_user._id)>-1?'gold':'black'" appClickColor (click)="like(a._id,a.likeBy)">
+                          <span>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"></i> Like
+                          </span>
+                        </button>
+                        <span *ngIf="loggedIn || userIsAuthenticated">{{a.likeBy.length}}</span>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+
+      <!--app-checkout class="checkout" ng-show=""></app-checkout-->
+    </div>
+
+  <!--/div-->
+
+
+  <footer id="myFooter" *ngIf="!isLoading">
+    <div class="container">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="social-networks">
+      <a href="#" class="twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#" class="facebook">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#" class="google">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2018 NetDish LLC. </p>
+    </div>
+  </footer>
+</body>
+
+</html>

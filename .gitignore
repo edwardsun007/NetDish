@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+.vagrant
+node_modules/
+package-lock.json
+.vscode
+dist/
+*node_modules/*
+*dist/*

@@ -1,0 +1,20 @@
+.example-fill-remaining-space{
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: #ff313e;
+  margin-bottom: 200px;
+  height:100px!important;
+}
+
+mat-toolbar > span {
+  font-size: 1.25em;
+  color:white;
+  font-family: Verdana, sans-serif;
+  margin-right: 1%;
+}
+
+.user-card{
+  max-height: 100%!important;
+}

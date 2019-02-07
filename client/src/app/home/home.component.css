@@ -1,0 +1,368 @@
+/* *{
+  border: 4px solid orange;
+} */
+
+/*new header*/
+
+.example-fill-remaining-space{
+  flex: 2 1 auto;
+}
+
+.fa-sign-in {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 1.3rem!important;
+}
+
+/* online-user button*/
+.online-user {
+  border-radius:5px;
+  background-color:#009688;
+  color:white;
+}
+
+/*new header ends*/
+
+mat-spinner {
+  margin: auto;
+  display: block;
+}
+
+/*side card still exists?*/
+#sideCard {
+    width: 1000px;
+    font-size: 35px;
+    font-weight: bold;
+    color: bisque;
+    background-color:rgba(255,0,0,0.3);
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.container {
+    max-width: 1600px;
+}
+
+.navbar-expand-lg {
+    height: 80px;
+}
+
+#service {
+    background-color: #F9DB79;
+    color: #FFFFFF;
+}
+
+
+/*dish  part starts*/
+
+.dish-wrapper{
+  width: 30%;
+  margin: auto;
+  margin-top: 0;
+  vertical-align: top;
+  background-color:#c5b89e8a;
+  border-radius: 5px;
+}
+
+
+.dish{
+  border-radius: 2px;
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.dish-image-container{
+  /* overflow: hidden; */
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  /* width: 100%; */
+  /* width: 362px;
+  height: 245px; */
+}
+
+.dish-image-container > .image {
+  margin: 0;
+  position: relative;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.dish-info {
+  border-radius: 6px;
+}
+
+/* menu items */
+.food-name {
+  font-family: PingFang SC,Microsoft Yahei;font-size:20px;
+  font-weight:700;
+  text-align: center;
+}
+
+.food-price{
+  padding-left: 10px;
+}
+
+.dollar-sign{
+  font-weight: bolder;
+  color: gold;
+}
+
+.dish-info > .p-desc {
+  height: 120px;
+  padding-left: 10px;
+}
+
+/*dish part ends*/
+
+
+/*trick to make image fill space within outer wrapper div!*/
+/* #foodImg {
+  width:  100%;
+  height: auto;
+} */
+
+.dishwrapper > li {
+  font-size: 0.5em;
+  color: bisque;
+  background-color:rgba(255,0,0,0.3);
+}
+
+
+#foodInfo{
+    display: inline-block;
+    margin: 10px 0px 0px 50px;
+}
+
+.jumbotron {
+    /* background: url(/assets/images/pexels-photo-101533.jpeg) no-repeat center center; */
+    background: url(/assets/images/pexels-photo-374052.jpeg) no-repeat center center;
+    -webkit-background-attachment: fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+    height: 200px;
+    margin: 0px;
+}
+
+#show {
+    padding: 50px;
+    background: url(/assets/images/jumbotron_img.jpeg)
+    no-repeat center center;
+    -webkit-background-attachment: fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+
+#show .container {
+    padding: 20px;
+}
+
+.list-group-item.font {
+    color: bisque;
+    background-color:rgba(255,0,0,0.3);
+}
+
+/* .checkout {
+    display: inline-block;
+} */
+
+
+/*checkoutbox starts*/
+.checkoutbox{
+  position: fixed;
+  top: 15%;
+  right: 1%;
+  color:black;
+  background-color: white;
+  max-width: 260px;
+  z-index: 1;
+}
+
+.checkoutbox-wrapper{
+  max-width: 100%;
+}
+
+.checkout_counter{
+  background-color: #ff5f5f;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 18px;
+  position: absolute;
+  margin-left : 197px;
+  /* right: 15px; */
+  text-align: center;
+  /* top: 15px; */
+  width: 20px;
+  z-index: 1;
+}
+
+/*checkoutbox ends*/
+.list-group-flush:last-child .list-group-item:last-child{
+    height: 450px;
+}
+
+.card-block {
+    display: inline-block;
+    color: bisque;
+    text-align: center;
+    text-shadow:0 -1px 0 rgba(0,0,0,.3),0 0px 30px rgba(0,255,255,.7);
+    margin-right: 20px;
+}
+
+agm-map {
+    height: 200px;
+}
+
+h1 {
+    font-weight: bold;
+    /* font-style: palatino; */
+    margin: 0px;
+    font-family: 'Lobster', cursive;
+    /* color: bisque; */
+    color: rgb(209, 168, 119);
+    text-shadow:0 -1px 0 rgba(0,0,0,.3),0 0px 30px rgba(0,255,255,.7);
+    font-size: 80px;
+}
+
+
+/* Check out side menu */
+.mb-3 {
+    margin-left: 2%;
+}
+
+/*like button*/
+.like-btn {
+  margin-left: 10px;
+}
+
+.like-gold{
+  color: orange;
+}
+
+
+/* Footer section  */
+#myFooter {
+    background-color: #772953;
+    color: white;
+    padding-top: 20px;
+}
+
+#myFooter .row {
+    margin: 0 85px;
+}
+
+#myFooter .footer-copyright {
+    background-color: #10222e;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+
+#myFooter .container {
+    width: auto;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 38px;
+}
+
+#myFooter .fa {
+    font-size: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
+    background-color: white;
+    color: #182c39;
+    border-radius: 51%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 31px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#myFooter .fa-facebook:hover {
+    color: #2b55ff;
+}
+
+#myFooter .fa-facebook:focus {
+    color: #2b55ff;
+}
+
+#myFooter .fa-github:hover {
+    color: red;
+}
+
+#myFooter .fa-github:focus {
+    color: red;
+}
+
+#myFooter .fa-twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .fa-twitter:focus {
+    color: #00aced;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    #myFooter .row {
+        margin: 0;
+    }
+}
+
+
+.icon {
+    margin-right: 4px;
+  }
+
+  .font {
+      color: white;
+      font-size: 20px;
+  }
